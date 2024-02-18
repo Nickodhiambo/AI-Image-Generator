@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" sans-serif;
+}
+
+.image-generator{
+    height: 40vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.image-generator::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: #121212;
+}
+
+.image-generator .content{
+    text-align: center;
+    color: #fff;
+    padding: 0 15px;
+    max-width: 760px;
+    position: relative;
+}
+
+.image-generator h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.image-generator p{
+    font-size: 1.35rem;
+    margin-top: 10px;
+}
+
+.image-generator .generate-form{
+    height: 56px;
+    width: 100%;
+    margin: 45px 0 15px;
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+.image-generator .generate-form .generate-input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0 15px;
+    font-size: 1rem;
+}
+
+.image-generator .generate-form .controls{
+    display: flex;
+    height: 100%;
+    gap: 15px;
+}
+
+.image-generator .generate-form .image-quantity{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.image-generator .generate-form .generate-btn{
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background: #4949E7;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0 25px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.image-gallery{
+    max-width: 1250px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    padding: 0 15px;
+}
+
+.image-gallery .image-card{
+    width: 285px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #f2f2f2;
+    position: relative;
+}
+
+.image-gallery .image-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-gallery .image-card.loading img{
+    width: 80px;
+    height: 80px;
+}
+
+.image-gallery .image-card .download-btn{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #fff;
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.image-gallery .image-card:not(.loading):hover .download-btn{
+    display: flex;
+}
+
+.image-gallery .image-card .download-btn img{
+    width: 14px;
+    height: 14px;
+}
+
